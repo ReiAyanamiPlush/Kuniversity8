@@ -86,10 +86,10 @@ public class SimpleList {
         head = headBackup;
         Node current = head;
 
-        // Durchsuche die Liste nach dem Knoten mit dem Wert preValue
+
         while (current != null) {
             if (current.value == preValue) {
-                // Knoten mit preValue gefunden
+
                 Node newNode = new Node(newValue);
                 newNode.next = current.next;
                 current.next = newNode;
@@ -98,7 +98,7 @@ public class SimpleList {
             current = current.next;
         }
 
-        // Knoten mit preValue nicht gefunden
+
         return false;
     }
 
@@ -115,24 +115,23 @@ public class SimpleList {
 //    }
 
     public boolean delete(int value) {
-        // Spezialfall: Der Kopfknoten soll gelöscht werden
         if (head != null && head.value == value) {
             head = head.next;
             return true;
         }
 
-        // Durchsuche die restliche Liste
+
         Node current = head;
         while (current != null && current.next != null) {
             if (current.next.value == value) {
-                // Knoten mit dem gesuchten Wert gefunden
+
                 current.next = current.next.next;
                 return true;
             }
             current = current.next;
         }
 
-        // Knoten mit dem gesuchten Wert nicht gefunden
+
         return false;
     }
 
