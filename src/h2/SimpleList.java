@@ -6,7 +6,7 @@ public class SimpleList {
     Node headBackup;
 
     SimpleList() {
-        head = new Node(0);
+        head = new Node(0);     //a
         headBackup = head;
     }
 
