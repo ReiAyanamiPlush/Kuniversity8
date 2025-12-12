@@ -2,8 +2,8 @@ package h1;
 
 public class Bruch {
 
-    int zaehler = 0;
-    int nenner = 0;
+    int zaehler;
+    int nenner;
 
     Bruch(int zaehler, int nenner) {
         this.zaehler = zaehler;
